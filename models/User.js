@@ -37,7 +37,7 @@ const userSchema = new schema(
     Gender: { type: String, required: true },
     Country: { type: String, required: true },
     City: { type: String, required: true },
-    Hobbies: [],
+    Hobbies: { type: String, required: true },
     RequestIds: [{ type: schema.Types.ObjectId, ref: "User" }],
     FriendIds: [{ type: schema.Types.ObjectId, ref: "User" }],
   },

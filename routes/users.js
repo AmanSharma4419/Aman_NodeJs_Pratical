@@ -2,7 +2,6 @@ var express = require("express");
 var router = express.Router();
 var auth = require("../utils/auth");
 var User = require("../models/User");
-// var Request = rquire("../models/Request");
 /* GET users liesting. */
 router.get("/", function (req, res, next) {
   res.send("respond with a resource");
@@ -34,6 +33,7 @@ router.post("/login", async (req, res, next) => {
 
 // Route for adding the credentials of user
 router.post("/user-credentials", async (req, res, next) => {
+  console.log(req.body, "getting the response");
   try {
     if (
       !req.body.firstName ||
